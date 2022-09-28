@@ -43,5 +43,6 @@ jobs:
               uses: JamesIves/github-pages-deploy-action@4.1.4
               if: always()
               with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
                 branch: gh-pages
                 folder: reports\cucumber-htmlreport
