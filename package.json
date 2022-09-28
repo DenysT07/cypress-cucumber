@@ -4,7 +4,9 @@
   "description": "Telnyx autotest",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "cypress:run": "cypress run",
+    "test": "cypress open",
+    "cypress:report": "node cucumber-html-report.js"
   },
   "repository": {
     "type": "git",
@@ -19,9 +21,21 @@
   "devDependencies": {
     "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
     "cypress": "^10.9.0",
-    "esbuild": "^0.15.9"
+    "esbuild": "^0.15.9",
+    "multiple-cucumber-html-reporter": "^2.0.0"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^13.0.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "jsonlogs/log.json",
+      "formater": "cucumber-json-formatter.exe"
+    },
+    "messages": {
+      "enabled": true,
+      "output": "jsonlogs/messages.ndjson"
+    }
   }
 }
