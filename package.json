@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/DenysT07/cypress-cucumber/issues"
   },
-  "homepage": "https://github.com/DenysT07/cypress-cucumber#readme",
+  "homepage": "https://denyst07.github.io/cypress-cucumber/",
   "devDependencies": {
     "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
     "cypress": "^10.9.0",
