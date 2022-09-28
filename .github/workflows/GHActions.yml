@@ -44,4 +44,4 @@ jobs:
               if: always()
               with:
                 branch: gh-pages
-                folder: cypress/reports
+                folder: reports\cucumber-htmlreport
