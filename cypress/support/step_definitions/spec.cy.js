@@ -147,7 +147,7 @@ When('I Input {string} in first field', (firstInput) => {
     })
 When('I Input {string} in second field and click on the Continue button', (secondInput) => {
       allPages.clickAndFill(allPages.toolFreeNumber, ("{selectall}" + secondInput))
-  cy.wait(1000)
+  cy.wait(10000)
   mainPage.clickOnButoon(allPages.continueButt)
 })
 
