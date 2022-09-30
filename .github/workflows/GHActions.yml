@@ -12,8 +12,6 @@ jobs:
               with:
                   node-version: 16.16.0
                   cache: "npm"
-            - name: update node manager
-              run: npm i npm@latest
             - name: install all dependencies
               run: npm i
             - name: run test

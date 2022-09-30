@@ -21,13 +21,17 @@
   "devDependencies": {
     "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
     "cypress": "^10.9.0",
+    "cypress-xpath": "^2.0.1",
     "esbuild": "^0.15.9",
     "multiple-cucumber-html-reporter": "^2.0.0"
   },
   "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^13.0.2"
+    "@badeball/cypress-cucumber-preprocessor": "^13.0.2",
+    "@cucumber/cucumber": "^8.6.0",
+    "cypress-xpath": "^2.0.1"
   },
   "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
     "json": {
       "enabled": true,
       "output": "jsonlogs/log.json",
