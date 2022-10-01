@@ -1,4 +1,3 @@
-const allowCookieButtloc = '[class*="itIjRb"]'
 const elasticSipButtLoc = '[class*="kZyHWE"] li>[href="/products/sip-trunks"]'
 const callControlButtLoc = '[class*="kZyHWE"] li>[href="/products/voice-api"]'
 const programmableSMSButLoc = '[class*="kZyHWE"] li>[href="/products/sms-api"]'
@@ -24,66 +23,63 @@ class MainPage {
         Element.focus()
     }
     clickOnButoon(Element) {
-        Element.click({force: true},{timeout: 2000})
+        Element.click({ force: true }, { timeout: 2000 })
     }
-    get allowCookieButt() {
-        return cy.get(allowCookieButtloc)
-    }
-    scrollAndClick(Element){
+    scrollAndClick(Element) {
         Element.scrollIntoView()
         Element.click();
-   }
-   get resourcesButt() {
-    return cy.get(resourcesButtLoc)
-   }
-   get calculatorsButt() {
-    return cy.get(calculatorsButtLoc)
-   }
-   get elasticSipBut() {
-    return cy.get(elasticSipButtLoc)
-   }
-   get callControlButt() {
-    return cy.get(callControlButtLoc)
-   }
-   get programmableSMSBut() {
-    return cy.get(programmableSMSButLoc)
-   }
-   get whatsAppAPIBut() {
-    return cy.get(whatsAppAPIButLoc)
-   }
-   get secureFaxingButLoc() {
-    return cy.get(secureFaxingButLoc)
-   }
-   get wirelessCelluralBut() {
-    return cy.get(wirelessCelluralButLoc)
-   }
-   get numberLookupBut() {
-    return cy.get(numberLookupButLoc)
-   }
-   get globalNumbersBut() {
-    return cy.get(globalNumbersButLoc)
-   }
-   get verifyAPIBut() {
-    return cy.get(verifyAPIButLoc)
-   }
-   get dataAndPrivacyBut() {
-    return cy.get(dataAndPrivacyButLoc)
-   }
-   get reportAabuseBut() {
-    return cy.get(reportAabuseButLoc)
-   }
-   get privacyPolicyBut() {
-    return cy.get(privacyPolicyButLoc)
-   }
-   get connectToLinkedinBut() {
-    return cy.get(connectToLinkedinButLoc)
-   }
-   get followOnFaceBookBut() {
-    return cy.get(followOnFaceBookButLoc)
-   }
-   get followOnTwitterButt() {
-    return cy.get(followOnTwitterButtLoc)
-   }
+    }
+    get resourcesButt() {
+        return cy.get(resourcesButtLoc)
+    }
+    get calculatorsButt() {
+        return cy.get(calculatorsButtLoc)
+    }
+    get elasticSipBut() {
+        return cy.get(elasticSipButtLoc)
+    }
+    get callControlButt() {
+        return cy.get(callControlButtLoc)
+    }
+    get programmableSMSBut() {
+        return cy.get(programmableSMSButLoc)
+    }
+    get whatsAppAPIBut() {
+        return cy.get(whatsAppAPIButLoc)
+    }
+    get secureFaxingButLoc() {
+        return cy.get(secureFaxingButLoc)
+    }
+    get wirelessCelluralBut() {
+        return cy.get(wirelessCelluralButLoc)
+    }
+    get numberLookupBut() {
+        return cy.get(numberLookupButLoc)
+    }
+    get globalNumbersBut() {
+        return cy.get(globalNumbersButLoc)
+    }
+    get verifyAPIBut() {
+        return cy.get(verifyAPIButLoc)
+    }
+    get dataAndPrivacyBut() {
+        return cy.get(dataAndPrivacyButLoc)
+    }
+    get reportAabuseBut() {
+        return cy.get(reportAabuseButLoc)
+    }
+    get privacyPolicyBut() {
+        return cy.get(privacyPolicyButLoc)
+    }
+    get connectToLinkedinBut() {
+        return cy.get(connectToLinkedinButLoc)
+    }
+    get followOnFaceBookBut() {
+        return cy.get(followOnFaceBookButLoc)
+    }
+    get followOnTwitterButt() {
+        return cy.get(followOnTwitterButtLoc)
+    }
 
 }
 export default new MainPage();

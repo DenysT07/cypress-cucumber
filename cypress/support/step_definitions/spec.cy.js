@@ -1,56 +1,19 @@
 import { Given, When, Then, } from "@badeball/cypress-cucumber-preprocessor";
+import abuseRepoPage from "../../e2e/pages/abuseRepoPage";
 import allPages from "../../e2e/pages/allPages";
+import beforeTestPage from "../../e2e/pages/beforeTestPage";
 import confirmTextPage from "../../e2e/pages/confirmTextPage";
+import helper from "../../e2e/pages/helper";
 import mainPage from "../../e2e/pages/mainPage";
 
 
 Given('I am on the Telnyx main page and click on Allow Cookie and scroll to bottom', () => {
   cy.visit("/");
-  mainPage.clickOnButoon(mainPage.allowCookieButt)
+  beforeTestPage.clickAllowCoockie()
   cy.scrollTo('bottom')
 });
 
-//Scenario#1
-When("I Click on the {string} button.", (buttonTitle) => {
-  switch (buttonTitle) {
-    case ('Elastic SIP Trunking'):
-      mainPage.clickOnButoon(mainPage.elasticSipBut)
-      break
-    case ('WhatsApp API'):
-      mainPage.clickOnButoon(mainPage.whatsAppAPIBut)
-      break
-  }
-});
-
-When("I scroll to the {string} button and click on it.", (buttonTitle) => {
-  switch (buttonTitle) {
-    case ('Competitor Networks'):
-      mainPage.scrollAndClick(allPages.competitorNetworkButt)
-      break
-    case ('How does WhatsApp*'):
-      mainPage.scrollAndClick(allPages.howDoesWhatsAppButt)
-      break
-  }
-});
-
-Then("I should see the {string} text", (text) => {
-  switch (text) {
-    case ('Other CPaaS*'):
-      confirmTextPage.confirmTextTC1.should(
-        "have.text",
-        text,
-      );
-      break
-    case ('To onboard your*'):
-      confirmTextPage.confirmTextTC4.should(
-        "have.text",
-        text,
-      );
-      break
-  }
-});
-
-// Scenario#2
+// Scenario#1
 When("I Click on the {string} button", (buttonTitle) => {
   switch (buttonTitle) {
     case ('Call Control - Voice API'):
@@ -80,6 +43,15 @@ When("I Click on the {string} button", (buttonTitle) => {
       break
     case ('Privacy Policy'):
       mainPage.clickOnButoon(mainPage.privacyPolicyBut)
+      break
+    case ('Report Abuse'):
+      mainPage.clickOnButoon(mainPage.reportAabuseBut)
+      break
+    case ('Elastic SIP Trunking'):
+      mainPage.clickOnButoon(mainPage.elasticSipBut)
+      break
+    case ('WhatsApp API'):
+      mainPage.clickOnButoon(mainPage.whatsAppAPIBut)
       break
 
   }
@@ -114,6 +86,12 @@ When("I scroll to the {string} button and click on it", (buttonTitle) => {
     case ('Cookie Policy'):
       mainPage.scrollAndClick(allPages.cookiePolicyButt)
       break
+    case ('Competitor Networks'):
+      mainPage.scrollAndClick(allPages.competitorNetworkButt)
+      break
+    case ('How does WhatsApp Business work'):
+      mainPage.scrollAndClick(allPages.howDoesWhatsAppButt)
+      break
   }
 });
 
@@ -125,14 +103,48 @@ Then("I should see the {string} title", (text) => {
   );
 });
 
+//Scenario#2
+Then("I should see the {string} text", (text) => {
+  switch (text) {
+    case ('Other CPaaS providers build their networks on just one cloud provider, increasing their risk of network failure.'):
+      confirmTextPage.confirmTextTC1.should(
+        "have.text",
+        text,
+      );
+      break
+    case ('To onboard your business with WhatsApp, you must obtain a Facebook Business Manager ID.'):
+      confirmTextPage.confirmTextTC4.should(
+        "be.visible",
+      );
+      break
+    case ('Thank you for submitting your abuse complaint.'):
+      confirmTextPage.confirmTextTC11.should(
+        "have.text",
+        text,
+      );
+      break
+  }
+});
+
 //Scenario#3
+When('I fill all fields and click both checkboxes', () => {
+  abuseRepoPage.multipliClick(abuseRepoPage.bothCheckBoxes)
+  allPages.clickAndFill(abuseRepoPage.subjectField, helper.randomString1)
+  allPages.clickAndFill(abuseRepoPage.abusedPhoneNumberField, helper.randomPhone)
+  allPages.clickAndFill(abuseRepoPage.abusivePhoneNumberField, helper.randomPhone)
+  allPages.clickAndFill(abuseRepoPage.timeAndDateField, '{selectall}08/09/2022 5:40 P')
+  allPages.clickAndFill(abuseRepoPage.fullNameField, helper.randomString1)
+  allPages.clickAndFill(abuseRepoPage.additionalInfoField, helper.randomString1)
+  allPages.clickAndFill(abuseRepoPage.emailField, helper.randomString1 + "@gmail.com")
+})
+When('I click on the submite button', () => {
+  mainPage.clickOnButoon(abuseRepoPage.submiteButt)
+})
+
+//Scenario#4
 Given('I am on the Telnyx main page and Focuse on the Resources and click Saving calculators', () => {
   cy.visit("/");
-  cy.get('body').then(($body) => {
-    if ($body.find('[aria-label="close and deny"]').length > 0) {
-      cy.get('[aria-label="close and deny"]').click();
-    }
-  });
+  beforeTestPage.clickAllowCoockie()
   mainPage.clickOnButoon(mainPage.resourcesButt)
   mainPage.clickOnButoon(mainPage.calculatorsButt)
 });

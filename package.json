@@ -6,7 +6,9 @@
   "scripts": {
     "cypress:run": "cypress run",
     "test": "cypress open",
-    "cypress:report": "node cucumber-html-report.js"
+    "cypress:report": "node cucumber-html-report.js",
+    "cy:2KConfig": "npx cypress run --config-file cypress/configs/config.2K.js --headed",
+    "cy:4KConfig": "npx cypress run --config-file cypress/configs/config.4K.js --headed"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,9 @@
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^13.0.2",
     "@cucumber/cucumber": "^8.6.0",
-    "cypress-xpath": "^2.0.1"
+    "cypress-xpath": "^2.0.1",
+    "random-string": "^0.2.0",
+    "randomstring": "^1.2.2"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,

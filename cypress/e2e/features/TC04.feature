@@ -4,6 +4,6 @@ Feature: the 'How does WhatsApp Business work?' button on the 'WhatsApp API' pag
      
 
   Scenario: button functionality #2
-    When I Click on the 'WhatsApp API' button.
-    When I scroll to the 'How does WhatsApp Business work' button and click on it.
+    When I Click on the 'WhatsApp API' button
+    When I scroll to the 'How does WhatsApp Business work' button and click on it
     Then I should see the 'To onboard your business with WhatsApp, you must obtain a Facebook Business Manager ID.' text

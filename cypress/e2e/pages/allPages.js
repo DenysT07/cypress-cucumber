@@ -55,7 +55,7 @@ class AllPages {
         return cy.get(numberPoolingButtLoc)
     }
     get signUpFor10Butt() {
-        return cy.get(signUpFor10ButtLoc) 
+        return cy.get(signUpFor10ButtLoc)
     }
     get contactCenterButt() {
         return cy.get(contactCenterButtLoc)
