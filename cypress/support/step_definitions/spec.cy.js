@@ -24,10 +24,10 @@ When("I Click on the {string} button", (buttonTitle) => {
       break
     case ('Secure Faxing'):
       mainPage.clickOnButoon(mainPage.secureFaxingButLoc)
-      breakas
+      break
     case ('Wireless - Cellular IoT'):
       mainPage.clickOnButoon(mainPage.wirelessCelluralBut, { timeout: 4000 })
-      cy.wait(2000)
+      cy.wait(5000)
       break
     case ('Number Lookup'):
       mainPage.clickOnButoon(mainPage.numberLookupBut)
