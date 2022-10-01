@@ -25,14 +25,13 @@
     "cypress": "^10.9.0",
     "cypress-xpath": "^2.0.1",
     "esbuild": "^0.15.9",
-    "multiple-cucumber-html-reporter": "^2.0.0"
-  },
-  "dependencies": {
+    "multiple-cucumber-html-reporter": "^2.0.0",
     "@badeball/cypress-cucumber-preprocessor": "^13.0.2",
     "@cucumber/cucumber": "^8.6.0",
-    "cypress-xpath": "^2.0.1",
     "random-string": "^0.2.0",
     "randomstring": "^1.2.2"
+  },
+  "dependencies": {
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
@@ -42,8 +41,12 @@
       "formater": "cucumber-json-formatter"
     },
     "messages": {
-      "enabled": true,
+      "enabled": false,
       "output": "jsonlogs/messages.ndjson"
+    },
+    "html": {
+      "enabled": false,
+      "output": "jsonlogs/injex.html"
     }
   }
 }
