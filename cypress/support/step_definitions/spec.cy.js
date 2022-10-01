@@ -24,7 +24,7 @@ When("I Click on the {string} button", (buttonTitle) => {
       break
     case ('Secure Faxing'):
       mainPage.clickOnButoon(mainPage.secureFaxingButLoc)
-      break
+      breakas
     case ('Wireless - Cellular IoT'):
       mainPage.clickOnButoon(mainPage.wirelessCelluralBut, { timeout: 4000 })
       cy.wait(2000)
