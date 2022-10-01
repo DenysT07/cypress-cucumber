@@ -14,7 +14,7 @@ const connectToLinkedinButLoc = '[href*="linkedin"]'
 const followOnFaceBookButLoc = '[href*="facebook"]'
 const followOnTwitterButtLoc = '[href*="twitter"]'
 const resourcesButtLoc = '[class*="jgxzDd"]>li:nth-child(6)>span>span'
-const calculatorsButtLoc = 'div>[href*="calculator"]'
+const calculatorsButtLoc = 'div>[href*="calculator"]' 
 
 
 class MainPage {
