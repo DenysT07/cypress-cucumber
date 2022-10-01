@@ -117,7 +117,7 @@ Then("I should see the {string} text", (text) => {
         "be.visible",
       );
       break
-    case ('Thank you for submitting your abuse complaint.'):
+    case ('reCAPTCHA validation required'):
       confirmTextPage.confirmTextTC11.should(
         "have.text",
         text,

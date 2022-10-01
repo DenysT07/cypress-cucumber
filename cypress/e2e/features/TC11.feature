@@ -6,4 +6,4 @@ Feature: Report Abuse
         When I Click on the 'Report Abuse' button
         When I fill all fields and click both checkboxes
         When I click on the submite button
-        Then I should see the "Thank you for submitting your abuse complaint." text
+        Then I should see the "reCAPTCHA validation required" text
