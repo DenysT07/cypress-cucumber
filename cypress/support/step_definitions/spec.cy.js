@@ -137,6 +137,7 @@ When('I fill all fields and click both checkboxes', () => {
   allPages.clickAndFill(abuseRepoPage.additionalInfoField, helper.randomString1)
   allPages.clickAndFill(abuseRepoPage.emailField, helper.randomString1 + "@gmail.com")
   cy.wait(5000)
+  abuseRepoPage.submiteButt.click()
 })
 When('I click on the submite button', () => {
   abuseRepoPage.submiteButt.click()
