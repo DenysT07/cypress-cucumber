@@ -5,8 +5,8 @@ report.generate({
   metadata: {
     device: "Local test machine",
     platform: {
-      name: "Windows",
-      version: "10",
+      name: "Ubuntu",
+      version: "latest",
     },
   },
 });
