@@ -14,6 +14,7 @@ jobs:
                   cache: "npm"
             - name: install all dependencies
               run: npm i
+              run: chmod +x cucumber-json-formatter
             - name: run test
               run: npm run cypress:run
             - name: Generate reports
