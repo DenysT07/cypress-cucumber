@@ -3,8 +3,8 @@ import abuseRepoPage from "../../e2e/pages/abuseRepoPage";
 import allPages from "../../e2e/pages/allPages";
 import beforeTestPage from "../../e2e/pages/beforeTestPage";
 import confirmTextPage from "../../e2e/pages/confirmTextPage";
-import helper from "../../e2e/pages/helper";
 import mainPage from "../../e2e/pages/mainPage";
+import helper1 from "../../helper/helper";
 
 
 Given('I am on the Telnyx main page and click on Allow Cookie and scroll to bottom', () => {
@@ -136,6 +136,7 @@ When('I fill all fields and click both checkboxes', () => {
   allPages.clickAndFill(abuseRepoPage.fullNameField, helper.randomString1)
   allPages.clickAndFill(abuseRepoPage.additionalInfoField, helper.randomString1)
   allPages.clickAndFill(abuseRepoPage.emailField, helper.randomString1 + "@gmail.com")
+
 })
 When('I click on the submite button', () => {
   mainPage.clickOnButoon(abuseRepoPage.submiteButt)
