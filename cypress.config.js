@@ -19,7 +19,7 @@ async function setupNodeEvents(on, config) {
 }
 
 module.exports = defineConfig({
-  defaultCommandTimeout: 6000,
+  defaultCommandTimeout: 10000,
     execTimeout: 5000,
     taskTimeout: 5000,
   "chromeWebSecurity": false,

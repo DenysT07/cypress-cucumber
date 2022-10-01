@@ -1,8 +1,8 @@
 # cypress-cucumber
 
-### This project tests site https://telnyx.com/ using cypress and cucumber IO
+This project tests site https://telnyx.com/ using cypress and cucumber IO
 
-### Language - JavaSkript
+Language - JavaSkript
 
 ## For using need to:
 1. Instal Visuel Studio Code or other IDE

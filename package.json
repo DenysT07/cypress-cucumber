@@ -4,7 +4,7 @@
   "description": "Telnyx autotest",
   "main": "index.js",
   "scripts": {
-    "cypress:run": "cypress run",
+    "cypress:run": "cypress run --headed",
     "test": "cypress open",
     "cypress:report": "node cucumber-html-report.js",
     "cy:2KConfig": "npx cypress run --config-file cypress/configs/config.2K.js --headed",

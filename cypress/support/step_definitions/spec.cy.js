@@ -4,7 +4,7 @@ import allPages from "../../e2e/pages/allPages";
 import beforeTestPage from "../../e2e/pages/beforeTestPage";
 import confirmTextPage from "../../e2e/pages/confirmTextPage";
 import mainPage from "../../e2e/pages/mainPage";
-import helper1 from "../../helper/helper";
+import helper from "../../helper/helper";
 
 
 Given('I am on the Telnyx main page and click on Allow Cookie and scroll to bottom', () => {
