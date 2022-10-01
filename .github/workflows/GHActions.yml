@@ -4,7 +4,7 @@ on:
         branches: [main]
 jobs:
     Run_test:
-        runs-on: ubuntu-latest
+        runs-on: Windows-10
         steps:
             - uses: actions/checkout@v2
             - name: Use Node.js 
@@ -14,8 +14,6 @@ jobs:
                   cache: "npm"
             - name: install all dependencies
               run: npm i
-            - name: instal formatter
-              run: chmod +x cucumber-json-formatter
             - name: run test
               run: npm run cypress:run
             - name: Generate reports

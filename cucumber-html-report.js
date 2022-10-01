@@ -3,10 +3,10 @@ report.generate({
   jsonDir: "jsonlogs", // ** Path of .json file **//
   reportPath: "./reports/cucumber-htmlreport",
   metadata: {
-    device: "Local test machine",
+    device: "Github Actions machine",
     platform: {
-      name: "Ubuntu",
-      version: "latest",
+      name: "Windows",
+      version: "10",
     },
   },
 });
